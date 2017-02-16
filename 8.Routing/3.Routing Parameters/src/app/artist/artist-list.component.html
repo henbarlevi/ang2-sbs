@@ -1,0 +1,11 @@
+<h1>Artists</h1>
+<table class="table">
+  <tr *ngFor="let artist of artists">
+    <td>
+      <a [routerLink]="['/artists', artist.id]">{{artist.name}}</a>
+    </td><!--[routerLink]= '/artists' - the path 
+    artist.id - value of the parameter, the name of the parameter is 'artistId' set in the app.routing.ts
+    
+     -->
+  </tr>
+</table>

@@ -1,0 +1,23 @@
+//intialization for creating angular 2 project:
+//1.install node js (check if node installed by write in the cmd:node -v)
+//2.TypeScript - a superset of JS that adds new features to the lanugage (modules,classes,interfaces and more)
+//to install TypeScript globally - in Cmd : npm install -g typescript
+//3.in order to create a quick project folder structure with basic angular2 project files
+//and packages we extract from the zip file in the 'Angular 2 Step by Step/angular2-seed.zip'
+//to the project folder
+//OR option 2: 
+//write in the Cmd: npm install -g angular-cli and search for the other commands  needed
+//4.enter to the folder of the project (angular2 -seed) in the Cmd : cd angular2-seed
+//and install all packages writed in the package.json file by writing: npm install
+//5.in the package.json you can see in "scripts" -"start" that enable us to write:
+//npm start command that will :
+//* run typescript Compiler (that will generate the ts files to js files)
+//* start the lite web server
+//so write in the cmd : npm start (that will run the server)
+
+
+
+//------------Angular 2 Component----
+Component - Encapsulates the template,data and behaviour of a view
+every angular2 app have at least 1 component called 'Root Component'
+component can contain other componenets so an angular2 app is build from a tree of components
