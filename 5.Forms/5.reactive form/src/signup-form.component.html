@@ -1,0 +1,19 @@
+`
+    <form>
+      <div class="from-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control">
+      </div>
+      <div class="from-group">
+        <label for="password">Paddssword</label>
+        <input type="text" id="password" class="form-control">
+      </div>
+      
+    </form>
+
+  <!-- //the NgForm directive it automatically applys itself to the form element
+  //so we declared the template local vairable #form and assign to it the ngForm
+  //instance that contain properties about the form state like NgForm.invalid
+ //*since it automatically get the NgForm functionality we should sub to the (ngSubmit)
+ //and not to (submit), (ngSubmit) emit by ngForm -->
+
