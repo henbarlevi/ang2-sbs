@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
 //[style.backgroundColor] = "isInvalid(baseAmount) ? 'red': 'white' // set the element style.background to value depend on the isInvalid value returned
 //Or:
 //[ngClass] ="{error: isInvalid(baseAmount)}" // adding to input the class named 'error' depends on the bvool value from isInvalid(baseAmount) - true/false
+//  Or:
+//[ngStyle]="{'background-color':isInvalid(baseAmount) ? 'red': 'white'}"  - // set the element style.background to value depend on the isInvalid value returned
   //adding the css style:
   styles: [`
     input[type=number] {
