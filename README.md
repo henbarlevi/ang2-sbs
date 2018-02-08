@@ -205,7 +205,9 @@ import {AuthInterceptor} from './somefolder/auth.interceptor';
 ```ts
 import { HttpInterceptor,HttpRequest,HttpEvebt} from '@angular/common/http';
 import { Observable} from 'rxjs/Observable';
-import { } from 'rxjs/add/opertaor/do';
+import 'rxjs/add/opertaor/do';
+import { Injectable } from '@angular/core';
+@Injectable()
 export class AuthInterceptor implements HttpInterceptor{
     construactor(private AuthService:AuthService){}
     intercept(req:HttpRequest<any>,next:HttpHandler):Observable<HttpEvent<any>>{
