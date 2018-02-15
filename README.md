@@ -99,9 +99,9 @@ import {Injectable} from '@angular/core';
 export class someService { //make http request to get the quote in the 
   constructor(private httpClient:HttpClient){ }
   getProjectsByDomain(domain) : Promise<any>{
-    let params: URLSearchParams = new URLSearchParams();
-    params.set('domain', domain);
-    return this.httpClient.get<iProject[]>(`${this.baseUrl}/project`, { search: params })
+    const queryStringParams = new HttpParmas().set('auth','somevalue');
+    
+    return this.httpClient.get<iProject[]>(`${this.baseUrl}/project`, { params: queryStringParams })
       .toPromise()
     //   .then(response => response.json()) - no need - HttpClient will extract the body of the response automatically by default
     
@@ -118,7 +118,7 @@ export class someService { //make http request to get the quote in the
 
 ```ts
     return this.httpClient.get(`${this.baseUrl}/project`, 
-    { search: params 
+    { 
       observe:'response' // 'body' by default
       responseType:'text'/'blob'/'arrayBuffer' //'json' by default ,blob -if wanting to download a file
 })
@@ -126,7 +126,7 @@ export class someService { //make http request to get the quote in the
 - you can also <b> listen to the http events </b> - 'SENT' (when request is sent)/'RESPONSE' (when response received)/'DownlaodProgress' (if downloading a file) and more.
 ```ts
     return this.httpClient.get(`${this.baseUrl}/project`, 
-    { search: params 
+    { 
       observe:'events' //listen to the http events
     })
 ```
@@ -134,7 +134,7 @@ export class someService { //make http request to get the quote in the
 ```ts
 const headers = new HttpHeaders().set('Authorization','Bearer asdasd');
     return this.httpClient.get(`${this.baseUrl}/project`, 
-    { search: params 
+    { 
       observe:'body',
       headers:headers
     })
@@ -144,7 +144,7 @@ Note you can also just concat it in a string, this is alternative
 ```ts
 const queryStrings = new HttpParmas().set('auth','somevalue');
     return this.httpClient.get(`${this.baseUrl}/project`, 
-    { search: params 
+    {
       observe:'body',
       params:queryStrings
     })
@@ -205,7 +205,7 @@ import {AuthInterceptor} from './somefolder/auth.interceptor';
 ```ts
 import { HttpInterceptor,HttpRequest,HttpEvebt} from '@angular/common/http';
 import { Observable} from 'rxjs/Observable';
-import 'rxjs/add/opertaor/do';
+import q'rxjs/add/opertaor/do';
 import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor{
