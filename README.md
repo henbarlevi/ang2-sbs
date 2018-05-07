@@ -15,13 +15,12 @@ this Doc is a Cheat Sheet for the main concepts + advance concepts
 #### ===========================================
 ## 1. [Basics](#Basics) 📚 
 > - #### 📗 [Binding](#Binding) - property binding, event binding, Two way Binding Etc..
-> - #### 📗 Styling - styling a component, class and style binding
+> - #### 📗 [Styling](#Styling) - styling a component, class and style binding
 > - #### 📗 Directives - ngIf, else ,ngFor , 
 > - #### 📗 Pipes - ngIf, class and style binding
 
 ## 2. [Forms] 📚 
 > - #### 📗 FormsModule - Creating Form , ngValid
-> - #### 📗 Pipes - ngIf, class and style binding
 
 ## 3. [Http](#Http) 📚 
 > - #### 📗 [[old] Http](#httpold) ()
@@ -34,7 +33,7 @@ this Doc is a Cheat Sheet for the main concepts + advance concepts
 
 
  # Basics <a name="Basics"> 📚
-> ## Binding 📗
+> ## Binding 📗 <a name="Binding"></a>
 > ### we have 4 ways of Data Binding:
 ### 1. Interpolation {{}} - data from component sends to the DOM
 ### 2. One Way Binding [] - data from component sends to the DOM
