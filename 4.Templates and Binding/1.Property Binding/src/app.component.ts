@@ -1,5 +1,5 @@
 // we have 4 ways of Data Binding:
-// Interpolation {} - data from component sends to the DOM
+// Interpolation {{}} - data from component sends to the DOM
 // One Way Binding [] - data from component sends to the DOM
 // Event Binding () - data from DOM sends to the component
 // Two Way Binding [()] - data in hte component affect the DOM and the opposite
